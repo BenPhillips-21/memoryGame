@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../styles.css';
 
 function Cards() {
   let allMonkeys = ['animatedMonkey.gif', 'beanieMonkey.gif', 'boatMonkey.gif', 'crazyMonkey.gif', 'danceMonkey.gif', 'shirtMonkey.gif', 'hoppyMonkey.gif', 'berryMonkey.gif', 'miniMonkey.gif', 'shooterMonkey.gif', 'swagMonkey.gif','bathMonkey.gif','businessMonkey.gif','cheekyMonkey.gif','cycleMonkey.gif','dogMonkey.gif','prettyMonkey.gif','skaterMonkey.gif','slideMonkey.gif','spinMonkey.gif','zenMonkey.gif','devMonkey.gif','ironingMonkey.gif','blackMonkey.gif','puppetMonkey.gif','rangaMonkey.gif'];
@@ -48,13 +49,21 @@ function Cards() {
     return newArray;
   }
 
+  if (score === 14) {
+    return (
+      <>
+        <h1>You beat the game!!!??!</h1>
+      </>
+    )
+  }
+
   return (
-    <>
-    <h1 style={{ marginTop: '-15px' }}>Monkey Memory Game</h1>
-    <h4>Don't click the same monkey twice!</h4>
+    <> 
+    <h1 style={{ marginTop: '-15px', marginBottom: '-10px'}}>Monkey Memory Game</h1>
+    <h3 style={{ marginTop: '-50x' }}>Don't click the same monkey twice!</h3>
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <h4 style={{ marginTop: '0px', marginLeft: '30px', marginRight: '30px' }}>Score: {score}</h4>
-      <h4 style={{ marginTop: '0px' }}>High Score: {highScore}</h4>
+      <h2 style={{ marginTop: '0px', marginLeft: '30px', marginRight: '30px' }}>Score: {score}</h2>
+      <h2 style={{ marginTop: '0px' }}>High Score: {highScore}</h2>
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {monkeys.map((gif, index) => (
