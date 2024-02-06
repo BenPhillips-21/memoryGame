@@ -53,6 +53,8 @@ function Cards() {
     return (
       <>
         <h1>You beat the game!!!??!</h1>
+        <h3>Well, this is awkward...</h3>
+        <button onClick={() => window.location.reload()}>Play Again?</button>
       </>
     )
   }
